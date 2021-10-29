@@ -33,8 +33,6 @@ const items = [
   { id: 5, weight: 3 }
 ];
 
-const items = [{ id: 1, weight: 2 },{ id: 2, weight: 9 },{ id: 3, weight: 1 },{ id: 4, weight: 6 },{ id: 5, weight: 3 }];
-
 // Distribute over 2 recipients
 verteiler(items.entries(), (item) => item.weight, 2); 
 // => [
