@@ -26,26 +26,26 @@ For each recipient, an array of objects is returned.
 
 ```javascript
 const items = [
-  { id: 1, weight: 2 },
-  { id: 2, weight: 9 },
-  { id: 3, weight: 1 },
-  { id: 4, weight: 6 },
-  { id: 5, weight: 3 }
+  { name: 'a', weight: 2 },
+  { name: 'b', weight: 9 },
+  { name: 'c', weight: 1 },
+  { name: 'd', weight: 6 },
+  { name: 'e', weight: 3 }
 ];
 
 // Distribute over 2 recipients
 verteiler(items.entries(), (item) => item.weight, 2); 
 // => [
-//      [{ id: 2, weight: 9 }, { id: 1, weight: 2 }],
-//      [{ id: 4, weight: 6 }, { id: 5, weight: 3 }, { id: 3, weight: 1 }]
+//      [{ name: 'b', weight: 9 }, { name: 'a', weight: 2 }],
+//      [{ name: 'd', weight: 6 }, { name: 'e', weight: 3 }, { name: 'c', weight: 1 }]
 //    ]
 
 // Distribute over 3 recipients
 verteiler(items.entries(), (item) => item.weight, 3); 
 // => [
-//      [{ id: 2, weight: 9 }],
-//      [{ id: 4, weight: 6 }],
-//      [{ id: 5, weight: 3 }, { id: 1, weight: 2 }, { id: 3, weight: 1 }]
+//      [{ name: 'b', weight: 9 }],
+//      [{ name: 'd', weight: 6 }],
+//      [{ name: 'e', weight: 3 }, { name: 'a', weight: 2 }, { name: 'c', weight: 1 }]
 //    ]
 ```
 
