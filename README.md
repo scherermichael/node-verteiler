@@ -1,6 +1,6 @@
 # Verteiler
 
-Distributes an array of weighted items to a given number of recipients.
+Verteiler ([[fɛɐ̯ˈtaɪ̯lɐ], meaning: distributor](https://en.wiktionary.org/wiki/Verteiler)) distributes an array of weighted items to a given number of recipients.
 
 ## Installation
 
@@ -13,7 +13,7 @@ npm install verteiler
 First you need to integrate Verteiler into your application.
 
 ```javascript
-const verteiler = require('verteiler');
+import verteiler from 'verteiler';
 ```
 
 The function expects three input parameters:
@@ -34,14 +34,14 @@ const items = [
 ];
 
 // Distribute over 2 recipients
-verteiler(items.entries(), (item) => item.weight, 2); 
+verteiler(items, (item) => item.weight, 2); 
 // => [
 //      [{ name: 'b', weight: 9 }, { name: 'a', weight: 2 }],
 //      [{ name: 'd', weight: 6 }, { name: 'e', weight: 3 }, { name: 'c', weight: 1 }]
 //    ]
 
 // Distribute over 3 recipients
-verteiler(items.entries(), (item) => item.weight, 3); 
+verteiler(items, (item) => item.weight, 3); 
 // => [
 //      [{ name: 'b', weight: 9 }],
 //      [{ name: 'd', weight: 6 }],
